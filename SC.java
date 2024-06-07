@@ -79,7 +79,7 @@ class SeperateChain<K extends Comparable<K>, V> {
 
     void delete(K dkey) {
         if (isEmpty()) {
-            System.err.println("empty");
+            System.out.println("empty");
             return;
         }
         int home = hash(dkey);
@@ -93,15 +93,15 @@ class SeperateChain<K extends Comparable<K>, V> {
                 sc[home] = curr.next;
             else
                 prev.next = curr.next;
-            System.err.println("Deleted: " + curr.data);
+            System.out.println("Deleted: " + curr.data);
             no--;
         } else
-            System.err.println("Not found");
+            System.out.println("Not found");
     }
 
     void find(K fkey) {
         if (isEmpty()) {
-            System.err.println("Empty");
+            System.out.println("Empty");
             return;
         }
         int home = hash(fkey);
@@ -109,9 +109,9 @@ class SeperateChain<K extends Comparable<K>, V> {
         while (curr != null && !curr.data.key.equals(fkey))
             curr = curr.next;
         if (curr != null)
-            System.err.println("found: " + curr.data);
+            System.out.println("found: " + curr.data);
         else
-            System.err.println("not found");
+            System.out.println("not found");
     }
 }
 
