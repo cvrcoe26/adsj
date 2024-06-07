@@ -52,10 +52,10 @@ public class QueueArray{
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
 		int n,ch;
-		String ele;
+		int ele;
 		System.out.println("Enter array size: ");
 		n=sc.nextInt();
-		GenericQueue<String> q=new GenericQueue<>(n);
+		GenericQueue<Integer> q=new GenericQueue<>(n);
 		do{
 			System.out.printf("****MENU*****\n1.ENQUEUE\n2.DEQUEUE\n3.DISPLAY\n4.EXIT\nEnter choice :");
 			ch=sc.nextInt();
@@ -64,7 +64,7 @@ public class QueueArray{
 						System.out.println("Queue is full");
 					else{
 						System.out.println("Enter element : ");
-						ele=sc.next();
+						ele=sc.nextInt();
 						q.enqueue(ele);
 					}
 					break;
