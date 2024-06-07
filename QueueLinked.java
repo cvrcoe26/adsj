@@ -50,14 +50,14 @@ public class QueueLinked{
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
 		int ch;
-		String ele;
-		GenericQueue<String> q=new GenericQueue<>();
+		int ele;
+		GenericQueue<Integer> q=new GenericQueue<>();
 		do{
 			System.out.printf("****MENU*****\n1.ENQUEUE\n2.DEQUEUE\n3.DISPLAY\n4.EXIT\nEnter choice :");
 			ch=sc.nextInt();
 			switch(ch){
 				case 1:System.out.println("Enter element : ");
-					ele=sc.next();
+					ele=sc.nextInt();
 					q.enqueue(ele);
 					break;
 				case 2:if(q.isEmpty())
