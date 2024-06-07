@@ -48,10 +48,10 @@ public class StackArray{
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
 		int n,ch;
-		String ele;
+		int ele;
 		System.out.println("Enter array size: ");
 		n=sc.nextInt();
-		GenStackArray<String> s=new GenStackArray<>(n);
+		GenStackArray<Intger> s=new GenStackArray<>(n);
 		do{
 			System.out.printf("****MENU*****\n1.PUSH\n2.POP\n3.TOP\n4.DISPLAY\n5.EXIT\nEnter choice :");
 			ch=sc.nextInt();
@@ -60,7 +60,7 @@ public class StackArray{
 						System.out.println("Stack is full");
 					else{
 						System.out.println("Enter element : ");
-						ele=sc.next();
+						ele=sc.nextInt();
 						s.push(ele);
 					}
 					break;
