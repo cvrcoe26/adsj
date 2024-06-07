@@ -47,14 +47,14 @@ public class StackLinked{
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
 		int ch;
-		String ele;
-		LLIStack<String> s=new LLIStack<>();
+		int ele;
+		LLIStack<Integer> s=new LLIStack<>();
 		do{
 			System.out.printf("****MENU*****\n1.PUSH\n2.POP\n3.TOP\n4.DISPLAY\n5.EXIT\nEnter choice :");
 			ch=sc.nextInt();
 			switch(ch){
 				case 1:System.out.println("Enter element : ");
-					ele=sc.next();
+					ele=sc.nextInt();
 					s.push(ele);					
 					break;
 				case 2:if(s.isEmpty())
